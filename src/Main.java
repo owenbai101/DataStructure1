@@ -9,7 +9,7 @@ public class Main {
     private static int abc;
     public static void main(String[] args) {
         CharFinder finder = new CharFinder();
-        var ch=finder.findFirstNonRepeatingChar("a green apple");
+        var ch=finder.findFirstRepeatingChar("green apple");
         System.out.println(ch);
     }
     public static void reverse(Queue<Integer>queue)
