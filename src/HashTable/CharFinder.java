@@ -1,7 +1,9 @@
 package HashTable;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 public class CharFinder {
     public char findFirstNonRepeatingChar(String str)
@@ -21,7 +23,7 @@ public class CharFinder {
 
     public char findFirstRepeatingChar(String str)
     {
-        Map<Character,Integer> map = new HashMap<>();
+       /* Map<Character,Integer> map = new HashMap<>();
         var chars = str.toCharArray();
         for(var ch : chars)
         {
@@ -34,6 +36,18 @@ public class CharFinder {
             if(map.get(ch) >= 2)
                 return ch;
         }
+        return Character.MIN_VALUE;*/
+
+        Set<Character> set = new HashSet<>();
+        for(var ch : str.toCharArray())
+        {
+            if(set.contains(ch))
+                return ch;
+            set.add(ch);
+        }
         return Character.MIN_VALUE;
+
+
+
     }
 }
